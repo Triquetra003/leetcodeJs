@@ -7,22 +7,22 @@
 //1. The array 2. Property to print ( if not given then print all properties)
 
 let array1=[
-    {time:0,
+    {topic:0,
      time_spent:0,
      confidence_level:0
     },
-    {time:"1",
+    {topic:"1",
      time_spent:"1",
      confidence_level:"1"
     }
  ]
  
  let array2=[
-    {time:true,
+    {topic:true,
      time_spent:false,
      confidence_level:true
     },
-    {time:3,
+    {topic:3,
      time_spent:"3",
      confidence_level:false
     }
@@ -30,8 +30,8 @@ let array1=[
 
 const loopThrough = function(arr,prop){
     for (let i=0;i<arr.length;i++) {
-       if (prop=='time') {
-        console.log("Value of "+prop+":"+arr[i].time);
+       if (prop=='topic') {
+        console.log("Value of "+prop+":"+arr[i].topic);
         console.log(arr)
     }
       if (prop=='time_spent') {
@@ -48,4 +48,4 @@ const loopThrough = function(arr,prop){
     }
 };
 
-loopThrough(array2,"time");
+loopThrough(array1);
