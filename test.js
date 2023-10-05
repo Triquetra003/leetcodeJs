@@ -3,25 +3,49 @@
 // Create a function: that loops over an object and firstly it will print the index of the current object and then it   prints all the key-value pairs object one by one.
 // The number of keys of the object is undefined
 // You have to make it dynamic
+// Assume that the object is not nested, can only have datatypes such as string number or Boolean. Function should accept 2 parameters 
+//1. The array 2. Property to print ( if not given then print all properties)
 
-let array=[
-    {time:undefined,
-     time_spent:undefined,
-     confidence_level:undefined
+let array1=[
+    {time:0,
+     time_spent:0,
+     confidence_level:0
     },
-    {time:undefined,
-     time_spent:undefined,
-     confidence_level:undefined
+    {time:"1",
+     time_spent:"1",
+     confidence_level:"1"
+    }
+ ]
+ 
+ let array2=[
+    {time:true,
+     time_spent:false,
+     confidence_level:true
+    },
+    {time:3,
+     time_spent:"3",
+     confidence_level:false
     }
  ]
 
-const loopThrough = function(){
-    for(let i=0;i<array.length;i++){
-       let currObj=i;
-       let vals=array[i]
-       console.log("Current Object : "+currObj)
-       console.log(vals)
+const loopThrough = function(arr,prop){
+    for (let i=0;i<arr.length;i++) {
+       if (prop=='time') {
+        console.log("Value of "+prop+":"+arr[i].time);
+        console.log(arr)
+    }
+      if (prop=='time_spent') {
+        console.log("Value of "+prop+":"+arr[i].time_spent);
+        console.log(arr)
+    }
+    if (prop=='confidence_level') {
+        console.log("Value of "+prop+":"+arr[i].confidence_level);
+        console.log(arr)
+    }
+    else if(prop==null){
+        console.log(arr)
+    }
     }
 };
 
-loopThrough();
+loopThrough(array2,"time");
